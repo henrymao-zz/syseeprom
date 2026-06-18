@@ -124,4 +124,20 @@ go test ./...
    ```go
    _ "platform/vendors/<vendor>/<platform>"
    ```
-5. Map `onie_machine` → driver name in `sysconf/sysconf.go`
+ 5. Map `onie_machine` → driver name in `sysconf/sysconf.go`
+
+## Debian Package
+
+```bash
+# Copy packaging files to project root and build
+cp -r package/debian .
+dpkg-buildpackage -us -uc -b
+
+# Source-only build for PPA submission
+dpkg-buildpackage -S -sa
+dput ppa:henrymao/ubuntu-nos ../syseeprom_*_source.changes
+```
+
+Package files are maintained in `package/debian/` to keep them separate
+from the Go source tree. When building, copy them to the project root
+where `dpkg-buildpackage` expects them.

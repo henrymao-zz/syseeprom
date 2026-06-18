@@ -1,0 +1,7 @@
+syseeprom (1.0.0-1) resolute; urgency=medium
+
+  * Initial release.
+  * Multi-vendor EEPROM reader with ONIE TLV support.
+  * Supports Dell S5232f, Mellanox, and Broadcom platforms.
+
+ -- henrymao <henry.mao@canonical.com>  Thu, 18 Jun 2026 10:00:00 +0800

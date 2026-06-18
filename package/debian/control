@@ -1,0 +1,16 @@
+Source: syseeprom
+Section: admin
+Priority: optional
+Maintainer: henrymao <henry.mao@canonical.com>
+Build-Depends: debhelper-compat (= 13), golang-go
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: syseeprom
+Architecture: any
+Depends: ${misc:Depends}
+Description: SONiC system EEPROM utility
+ Reads platform hardware identity (MAC, serial, model) from ONIE
+ or vendor-specific EEPROMs via I2C. Supports Dell S5232f, Mellanox,
+ and Broadcom switch platforms with auto-detection from
+ /etc/machine.conf.

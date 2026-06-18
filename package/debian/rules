@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export GO111MODULE = on
+export GOFLAGS = -mod=mod
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	go build -o syseeprom ./cmd/syseeprom/
+
+override_dh_auto_install:
+	install -D -m 755 syseeprom debian/syseeprom/usr/bin/syseeprom
+
+override_dh_auto_clean:
+	rm -f syseeprom
