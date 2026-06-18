@@ -114,7 +114,7 @@ go test ./...
 ./syseeprom broadcom
 ./syseeprom mellanox
 ```
-Ouput on a switch:
+Output on a switch:
 ```
 admin@dut-02:~$ sudo ./syseeprom 
 2026/06/18 09:18:09 Detected onie_machine=dellemc_s5232f_c3538 → driver=dell-s5232f
