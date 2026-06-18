@@ -114,6 +114,15 @@ go test ./...
 ./syseeprom broadcom
 ./syseeprom mellanox
 ```
+Ouput on a switch:
+```
+admin@dut-02:~$ sudo ./syseeprom 
+2026/06/18 09:18:09 Detected onie_machine=dellemc_s5232f_c3538 → driver=dell-s5232f
+System Base MAC: 20:88:10:58:F9:80
+Serial Number: TH0018MYCET0047H3Z4H
+Model: S5232F-ON
+admin@dut-02:~$ 
+```
 
 ## Adding a vendor
 
